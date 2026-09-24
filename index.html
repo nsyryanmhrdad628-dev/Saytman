@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کتاب‌های مهرداد نصیریان</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: #f7f3ed;
+      color: #29231f;
+      line-height: 1.8;
+    }
+
+    header {
+      background: linear-gradient(135deg, #3b2418, #8a5a32);
+      color: white;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 17px;
+      opacity: 0.95;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: 35px auto;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .intro h2 {
+      font-size: 27px;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      color: #665b53;
+    }
+
+    .books {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .book {
+      background: white;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .book:hover {
+      transform: translateY(-5px);
+    }
+
+    .cover {
+      height: 330px;
+      border-radius: 12px;
+      background: linear-gradient(145deg, #eee, #d8d0c8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      margin-bottom: 20px;
+      color: #6b5a4d;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .book h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .book p {
+      color: #756960;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #8a4d20;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 25px;
+      background: #7b4725;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #5f351c;
+    }
+
+    .package {
+      margin-top: 45px;
+      background: linear-gradient(135deg, #fff8ed, #f0dfc9);
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-align: center;
+      border: 1px solid #dfc8aa;
+    }
+
+    .package h2 {
+      margin-bottom: 10px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #8d8178;
+      margin-left: 10px;
+    }
+
+    .discount {
+      color: #9b3d25;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .order {
+      margin-top: 45px;
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    }
+
+    .order h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #d6ccc3;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+
+    .payment {
+      margin-top: 25px;
+      padding: 20px;
+      background: #faf5ef;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .payment strong {
+      font-size: 19px;
+      color: #70401f;
+    }
+
+    footer {
+      margin-top: 50px;
+      background: #2e211a;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 25px;
+      }
+
+      .cover {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>کتاب‌های مهرداد نصیریان</h1>
+  <p>کتاب‌هایی برای رشد، اخلاق، روابط و شناخت عمیق‌تر انسان</p>
+</header>
+
+<div class="container">
+
+  <section class="intro">
+    <h2>کتاب‌های من</h2>
+    <p>کتاب مورد نظر خود را انتخاب کنید و سفارش دهید.</p>
+  </section>
+
+  <section class="books">
+
+    <div class="book">
+      <div class="cover">
+        سایبان عشق
+      </div>
+
+      <h3>سایبان عشق</h3>
+      <p>اثر مهرداد نصیریان کیش</p>
+
+      <div class="price">
+        ۵۰۰٬۰۰۰ تومان
+      </div>
+
+      <button class="btn" onclick="selectBook('سایبان عشق')">
+        خرید کتاب
+      </button>
+    </div>
+
+
+    <div class="book">
+      <div class="cover">
+        اخلاق نیکو<br>
+        Good Ethics
+      </div>
+
+      <h3>اخلاق نیکو</h3>
+      <p>نویسنده: مهرداد نصیریان</p>
+
+      <div class="price">
+        ۵۰۰٬۰۰۰ تومان
+      </div>
+
+      <button class="btn" onclick="selectBook('اخلاق نیکو')">
+        خرید کتاب
+      </button>
+    </div>
+
+
+    <div class="book">
+      <div class="cover">
+        کتاب سوم
+      </div>
+
+      <h3>کتاب سوم</h3>
+      <p>به‌زودی اطلاعات کامل</p>
+
+      <div class="price">
+        ۵۰۰٬۰۰۰ تومان
+      </div>
+
+      <button class="btn" onclick="selectBook('کتاب سوم')">
+        خرید کتاب
+      </button>
+    </div>
+
+
+    <div class="book">
+      <div class="cover">
+        کتاب چهارم
+      </div>
+
+      <h3>کتاب چهارم</h3>
+      <p>به‌زودی اطلاعات کامل</p>
+
+      <div class="price">
+        ۵۰۰٬۰۰۰ تومان
+      </div>
+
+      <button class="btn" onclick="selectBook('کتاب چهارم')">
+        خرید کتاب
+      </button>
+    </div>
+
+  </section>
+
+
+  <section class="package">
+
+    <h2>📚 مجموعه کامل چهار کتاب</h2>
+
+    <p>
+      هر چهار کتاب را با هم تهیه کنید.
+    </p>
+
+    <p>
+      <span class="old-price">۲٬۰۰۰٬۰۰۰ تومان</span>
+      <strong>۱٬۸۰۰٬۰۰۰ تومان</strong>
+    </p>
+
+    <div class="discount">
+      ۲۰۰٬۰۰۰ تومان تخفیف برای خرید مجموعه
+    </div>
+
+    <button class="btn" onclick="selectBook('مجموعه چهار کتاب')">
+      خرید مجموعه
+    </button>
+
+  </section>
+
+
+  <section class="order" id="order">
+
+    <h2>🛒 ثبت سفارش</h2>
+
+    <div class="form-group">
+      <label>کتاب انتخابی</label>
+
+      <select id="bookSelect">
+        <option>سایبان عشق</option>
+        <option>اخلاق نیکو</option>
+        <option>کتاب سوم</option>
+        <option>کتاب چهارم</option>
+        <option>مجموعه چهار کتاب</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>نام و نام خانوادگی</label>
+      <input type="text" placeholder="نام خود را وارد کنید">
+    </div>
+
+    <div class="form-group">
+      <label>شماره تماس</label>
+      <input type="tel" placeholder="شماره موبایل">
+    </div>
+
+    <div class="form-group">
+      <label>آدرس</label>
+      <input type="text" placeholder="آدرس کامل برای ارسال کتاب">
+    </div>
+
+    <div class="payment">
+      <p>اطلاعات پرداخت</p>
+      <br>
+      <strong>بانک سپه</strong>
+      <p>شماره کارت:</p>
+      <strong>5892-1017-5728-1197</strong>
+    </div>
+
+    <br>
+
+    <div style="text-align:center;">
+      <button class="btn" onclick="sendOrder()">
+        ثبت سفارش
+      </button>
+    </div>
+
+  </section>
+
+</div>
+
+
+<footer>
+  <p>© تمامی حقوق این سایت محفوظ است.</p>
+  <p>مهرداد نصیریان</p>
+</footer>
+
+
+<script>
+
+function selectBook(book) {
+
+  document.getElementById("bookSelect").value = book;
+
+  document.getElementById("order").scrollIntoView({
+    behavior: "smooth"
+  });
+
+}
+
+
+function sendOrder() {
+
+  const book = document.getElementById("bookSelect").value;
+
+  alert(
+    "سفارش شما برای «" +
+    book +
+    "» ثبت اولیه شد.\n\n" +
+    "پس از پرداخت، رسید پرداخت را برای تکمیل سفارش ارسال کنید."
+  );
+
+}
+
+</script>
+
+</body>
+</html>
