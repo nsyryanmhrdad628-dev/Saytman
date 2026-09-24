@@ -1,414 +1,406 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>کتاب‌های مهرداد نصیریان</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کتاب‌های مهرداد نصیریان</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+*{
+  box-sizing:border-box;
+}
 
-    body {
-      font-family: Tahoma, Arial, sans-serif;
-      background: #f7f3ed;
-      color: #29231f;
-      line-height: 1.8;
-    }
+body{
+  margin:0;
+  font-family:Tahoma,Arial,sans-serif;
+  background:linear-gradient(135deg,#eaf6ff,#ffffff);
+  color:#222;
+}
 
-    header {
-      background: linear-gradient(135deg, #3b2418, #8a5a32);
-      color: white;
-      text-align: center;
-      padding: 45px 20px;
-    }
+header{
+  background:linear-gradient(135deg,#0066cc,#0088ee);
+  color:white;
+  text-align:center;
+  padding:30px 15px;
+  box-shadow:0 4px 15px rgba(0,0,0,.15);
+}
 
-    header h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
+header h1{
+  margin:0;
+  font-size:28px;
+}
 
-    header p {
-      font-size: 17px;
-      opacity: 0.95;
-    }
+header p{
+  margin:10px 0 0;
+  font-size:16px;
+}
 
-    .container {
-      width: 92%;
-      max-width: 1100px;
-      margin: 35px auto;
-    }
+.container{
+  max-width:950px;
+  margin:25px auto;
+  padding:15px;
+}
 
-    .intro {
-      text-align: center;
-      margin-bottom: 35px;
-    }
+.books{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:18px;
+}
 
-    .intro h2 {
-      font-size: 27px;
-      margin-bottom: 10px;
-    }
+.book{
+  background:white;
+  border-radius:18px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 5px 18px rgba(0,0,0,.10);
+  transition:.2s;
+}
 
-    .intro p {
-      color: #665b53;
-    }
+.book:hover{
+  transform:translateY(-4px);
+}
 
-    .books {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-    }
+.book h2{
+  color:#0066cc;
+  font-size:20px;
+}
 
-    .book {
-      background: white;
-      border-radius: 18px;
-      padding: 22px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-      text-align: center;
-      transition: 0.3s;
-    }
+.price{
+  font-size:19px;
+  font-weight:bold;
+  color:#008000;
+}
 
-    .book:hover {
-      transform: translateY(-5px);
-    }
+.package{
+  margin-top:25px;
+  background:#fff8dc;
+  border:2px solid #f0c000;
+  border-radius:18px;
+  padding:20px;
+  text-align:center;
+}
 
-    .cover {
-      height: 330px;
-      border-radius: 12px;
-      background: linear-gradient(145deg, #eee, #d8d0c8);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      margin-bottom: 20px;
-      color: #6b5a4d;
-      font-size: 20px;
-      font-weight: bold;
-    }
+.old-price{
+  text-decoration:line-through;
+  color:#888;
+  margin-left:10px;
+}
 
-    .book h3 {
-      font-size: 21px;
-      margin-bottom: 8px;
-    }
+.discount{
+  color:#d60000;
+  font-weight:bold;
+}
 
-    .book p {
-      color: #756960;
-      margin-bottom: 12px;
-    }
+.order-box{
+  background:white;
+  margin-top:30px;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,.12);
+}
 
-    .price {
-      font-size: 20px;
-      font-weight: bold;
-      color: #8a4d20;
-      margin-bottom: 15px;
-    }
+.order-box h2{
+  color:#0066cc;
+  text-align:center;
+}
 
-    .btn {
-      display: inline-block;
-      border: none;
-      border-radius: 10px;
-      padding: 12px 25px;
-      background: #7b4725;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      text-decoration: none;
-    }
+label{
+  display:block;
+  margin-top:15px;
+  margin-bottom:6px;
+  font-weight:bold;
+}
 
-    .btn:hover {
-      background: #5f351c;
-    }
+input,select,textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  font-size:16px;
+  font-family:inherit;
+}
 
-    .package {
-      margin-top: 45px;
-      background: linear-gradient(135deg, #fff8ed, #f0dfc9);
-      border-radius: 20px;
-      padding: 30px 20px;
-      text-align: center;
-      border: 1px solid #dfc8aa;
-    }
+textarea{
+  min-height:90px;
+  resize:vertical;
+}
 
-    .package h2 {
-      margin-bottom: 10px;
-    }
+.amount{
+  margin-top:20px;
+  background:#e9f7ff;
+  padding:18px;
+  border-radius:12px;
+  text-align:center;
+  font-size:20px;
+  font-weight:bold;
+  color:#0066cc;
+}
 
-    .old-price {
-      text-decoration: line-through;
-      color: #8d8178;
-      margin-left: 10px;
-    }
+.bank{
+  margin-top:20px;
+  background:#f5f5f5;
+  border-radius:12px;
+  padding:18px;
+  line-height:2;
+}
 
-    .discount {
-      color: #9b3d25;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
+button{
+  width:100%;
+  border:0;
+  border-radius:12px;
+  padding:15px;
+  margin-top:20px;
+  font-size:18px;
+  font-family:inherit;
+  cursor:pointer;
+  background:#0088ee;
+  color:white;
+}
 
-    .order {
-      margin-top: 45px;
-      background: white;
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
-    }
+button:hover{
+  background:#006dcc;
+}
 
-    .order h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+.success{
+  display:none;
+  margin-top:20px;
+  background:#e8fff0;
+  border:2px solid #28a745;
+  color:#176b2c;
+  border-radius:14px;
+  padding:20px;
+  line-height:2;
+}
 
-    .form-group {
-      margin-bottom: 15px;
-    }
+.sms-button{
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  background:#28a745;
+  color:white;
+  padding:14px;
+  border-radius:12px;
+  margin-top:15px;
+  font-size:17px;
+}
 
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: bold;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #d6ccc3;
-      border-radius: 10px;
-      font-size: 15px;
-    }
-
-    .payment {
-      margin-top: 25px;
-      padding: 20px;
-      background: #faf5ef;
-      border-radius: 15px;
-      text-align: center;
-    }
-
-    .payment strong {
-      font-size: 19px;
-      color: #70401f;
-    }
-
-    footer {
-      margin-top: 50px;
-      background: #2e211a;
-      color: white;
-      text-align: center;
-      padding: 30px 15px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 25px;
-      }
-
-      .cover {
-        height: 300px;
-      }
-    }
-  </style>
+footer{
+  text-align:center;
+  padding:25px;
+  margin-top:30px;
+  color:#777;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>کتاب‌های مهرداد نصیریان</h1>
-  <p>کتاب‌هایی برای رشد، اخلاق، روابط و شناخت عمیق‌تر انسان</p>
+  <h1>📚 کتاب‌های مهرداد نصیریان</h1>
+  <p>آموزش، اخلاق، خانواده و روابط انسانی</p>
 </header>
 
 <div class="container">
 
-  <section class="intro">
-    <h2>کتاب‌های من</h2>
-    <p>کتاب مورد نظر خود را انتخاب کنید و سفارش دهید.</p>
-  </section>
-
-  <section class="books">
+  <div class="books">
 
     <div class="book">
-      <div class="cover">
-        سایبان عشق
-      </div>
-
-      <h3>سایبان عشق</h3>
-      <p>اثر مهرداد نصیریان کیش</p>
-
-      <div class="price">
-        ۵۰۰٬۰۰۰ تومان
-      </div>
-
-      <button class="btn" onclick="selectBook('سایبان عشق')">
-        خرید کتاب
-      </button>
+      <h2>📘 سایبان عشق</h2>
+      <p>کتابی درباره عشق، رابطه و زندگی مشترک</p>
+      <div class="price">۵۰۰٬۰۰۰ تومان</div>
     </div>
-
 
     <div class="book">
-      <div class="cover">
-        اخلاق نیکو<br>
-        Good Ethics
-      </div>
-
-      <h3>اخلاق نیکو</h3>
-      <p>نویسنده: مهرداد نصیریان</p>
-
-      <div class="price">
-        ۵۰۰٬۰۰۰ تومان
-      </div>
-
-      <button class="btn" onclick="selectBook('اخلاق نیکو')">
-        خرید کتاب
-      </button>
+      <h2>📗 اخلاق نیکو</h2>
+      <p>نگاهی کاربردی به اخلاق و رفتار انسانی</p>
+      <div class="price">۵۰۰٬۰۰۰ تومان</div>
     </div>
-
 
     <div class="book">
-      <div class="cover">
-        کتاب سوم
-      </div>
-
-      <h3>کتاب سوم</h3>
-      <p>به‌زودی اطلاعات کامل</p>
-
-      <div class="price">
-        ۵۰۰٬۰۰۰ تومان
-      </div>
-
-      <button class="btn" onclick="selectBook('کتاب سوم')">
-        خرید کتاب
-      </button>
+      <h2>📙 کتاب سوم</h2>
+      <p>برای رشد فردی و بهتر زندگی کردن</p>
+      <div class="price">۵۰۰٬۰۰۰ تومان</div>
     </div>
-
 
     <div class="book">
-      <div class="cover">
-        کتاب چهارم
-      </div>
-
-      <h3>کتاب چهارم</h3>
-      <p>به‌زودی اطلاعات کامل</p>
-
-      <div class="price">
-        ۵۰۰٬۰۰۰ تومان
-      </div>
-
-      <button class="btn" onclick="selectBook('کتاب چهارم')">
-        خرید کتاب
-      </button>
+      <h2>📕 کتاب چهارم</h2>
+      <p>موضوعات کاربردی برای زندگی و خانواده</p>
+      <div class="price">۵۰۰٬۰۰۰ تومان</div>
     </div>
 
-  </section>
+  </div>
 
-
-  <section class="package">
-
-    <h2>📚 مجموعه کامل چهار کتاب</h2>
-
-    <p>
-      هر چهار کتاب را با هم تهیه کنید.
-    </p>
-
+  <div class="package">
+    <h2>🎁 مجموعه چهار کتاب</h2>
     <p>
       <span class="old-price">۲٬۰۰۰٬۰۰۰ تومان</span>
       <strong>۱٬۸۰۰٬۰۰۰ تومان</strong>
     </p>
+    <p class="discount">۲۰۰٬۰۰۰ تومان تخفیف ویژه</p>
+  </div>
 
-    <div class="discount">
-      ۲۰۰٬۰۰۰ تومان تخفیف برای خرید مجموعه
+  <div class="order-box">
+
+    <h2>🛒 ثبت سفارش کتاب</h2>
+
+    <label>انتخاب کتاب</label>
+    <select id="bookSelect" onchange="updateAmount()">
+      <option value="سایبان عشق">سایبان عشق - ۵۰۰٬۰۰۰ تومان</option>
+      <option value="اخلاق نیکو">اخلاق نیکو - ۵۰۰٬۰۰۰ تومان</option>
+      <option value="کتاب سوم">کتاب سوم - ۵۰۰٬۰۰۰ تومان</option>
+      <option value="کتاب چهارم">کتاب چهارم - ۵۰۰٬۰۰۰ تومان</option>
+      <option value="مجموعه چهار کتاب">مجموعه چهار کتاب - ۱٬۸۰۰٬۰۰۰ تومان</option>
+    </select>
+
+    <label>نام و نام خانوادگی</label>
+    <input id="fullName" type="text" placeholder="نام و نام خانوادگی">
+
+    <label>شماره موبایل</label>
+    <input id="phone" type="tel" placeholder="مثلاً 09123456789">
+
+    <label>کد پستی</label>
+    <input id="postalCode" type="text" placeholder="کد پستی ۱۰ رقمی">
+
+    <label>آدرس کامل</label>
+    <textarea id="address" placeholder="استان، شهر، خیابان، کوچه، پلاک و واحد"></textarea>
+
+    <div class="amount">
+      مبلغ قابل پرداخت:
+      <span id="amount">۵۰۰٬۰۰۰ تومان</span>
     </div>
 
-    <button class="btn" onclick="selectBook('مجموعه چهار کتاب')">
-      خرید مجموعه
+    <div class="bank">
+      <strong>💳 روش پرداخت</strong><br>
+      بانک سپه<br>
+      شماره کارت: <strong>5892-1017-5728-1197</strong>
+      <br>
+      ابتدا مبلغ سفارش را به کارت بالا واریز کنید.
+      <br>
+      سپس روی دکمه «ارسال رسید پیامکی» بزنید و
+      <strong>شماره پیگیری پرداخت</strong> را در پیامک وارد کنید.
+    </div>
+
+    <button onclick="sendOrder()">
+      ثبت سفارش و دریافت رسید پیامکی
     </button>
 
-  </section>
+    <div class="success" id="successBox">
 
+      <strong>✅ اطلاعات سفارش آماده شد.</strong>
 
-  <section class="order" id="order">
+      <div id="orderInfo"></div>
 
-    <h2>🛒 ثبت سفارش</h2>
+      <p>
+        حالا روی دکمه زیر بزنید تا پیامک سفارش برای فروشنده باز شود.
+        شماره پیگیری پرداخت را نیز داخل پیامک وارد کنید.
+      </p>
 
-    <div class="form-group">
-      <label>کتاب انتخابی</label>
+      <a id="smsLink" class="sms-button">
+        📩 ارسال رسید پیامکی
+      </a>
 
-      <select id="bookSelect">
-        <option>سایبان عشق</option>
-        <option>اخلاق نیکو</option>
-        <option>کتاب سوم</option>
-        <option>کتاب چهارم</option>
-        <option>مجموعه چهار کتاب</option>
-      </select>
+      <p>
+        پس از بررسی پرداخت، سفارش شما تأیید نهایی می‌شود.
+      </p>
+
     </div>
 
-    <div class="form-group">
-      <label>نام و نام خانوادگی</label>
-      <input type="text" placeholder="نام خود را وارد کنید">
-    </div>
-
-    <div class="form-group">
-      <label>شماره تماس</label>
-      <input type="tel" placeholder="شماره موبایل">
-    </div>
-
-    <div class="form-group">
-      <label>آدرس</label>
-      <input type="text" placeholder="آدرس کامل برای ارسال کتاب">
-    </div>
-
-    <div class="payment">
-      <p>اطلاعات پرداخت</p>
-      <br>
-      <strong>بانک سپه</strong>
-      <p>شماره کارت:</p>
-      <strong>5892-1017-5728-1197</strong>
-    </div>
-
-    <br>
-
-    <div style="text-align:center;">
-      <button class="btn" onclick="sendOrder()">
-        ثبت سفارش
-      </button>
-    </div>
-
-  </section>
+  </div>
 
 </div>
 
-
 <footer>
-  <p>© تمامی حقوق این سایت محفوظ است.</p>
-  <p>مهرداد نصیریان</p>
+  © تمامی حقوق برای مهرداد نصیریان محفوظ است.
 </footer>
 
 
 <script>
 
-function selectBook(book) {
+const prices = {
+  "سایبان عشق": 500000,
+  "اخلاق نیکو": 500000,
+  "کتاب سوم": 500000,
+  "کتاب چهارم": 500000,
+  "مجموعه چهار کتاب": 1800000
+};
 
-  document.getElementById("bookSelect").value = book;
-
-  document.getElementById("order").scrollIntoView({
-    behavior: "smooth"
-  });
-
+function formatPrice(number){
+  return number.toLocaleString('fa-IR') + " تومان";
 }
 
-
-function sendOrder() {
+function updateAmount(){
 
   const book = document.getElementById("bookSelect").value;
+  const price = prices[book];
 
-  alert(
-    "سفارش شما برای «" +
-    book +
-    "» ثبت اولیه شد.\n\n" +
-    "پس از پرداخت، رسید پرداخت را برای تکمیل سفارش ارسال کنید."
-  );
-
+  document.getElementById("amount").innerText =
+    formatPrice(price);
 }
+
+function sendOrder(){
+
+  const book = document.getElementById("bookSelect").value;
+  const name = document.getElementById("fullName").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const postal = document.getElementById("postalCode").value.trim();
+  const address = document.getElementById("address").value.trim();
+
+  if(!name){
+    alert("لطفاً نام و نام خانوادگی را وارد کنید.");
+    return;
+  }
+
+  if(!phone){
+    alert("لطفاً شماره موبایل را وارد کنید.");
+    return;
+  }
+
+  if(!postal){
+    alert("لطفاً کد پستی را وارد کنید.");
+    return;
+  }
+
+  if(!address){
+    alert("لطفاً آدرس کامل را وارد کنید.");
+    return;
+  }
+
+  const price = prices[book];
+
+  const orderNumber =
+    "ORD-" + Date.now().toString().slice(-8);
+
+  document.getElementById("orderInfo").innerHTML =
+    "<br><strong>شماره سفارش:</strong> " + orderNumber +
+    "<br><strong>کتاب:</strong> " + book +
+    "<br><strong>مبلغ:</strong> " + formatPrice(price) +
+    "<br><strong>نام:</strong> " + name;
+
+  const message =
+    "رسید پرداخت سفارش کتاب%0A" +
+    "شماره سفارش: " + orderNumber + "%0A" +
+    "کتاب: " + book + "%0A" +
+    "مبلغ: " + formatPrice(price) + "%0A" +
+    "نام: " + name + "%0A" +
+    "موبایل: " + phone + "%0A" +
+    "کد پستی: " + postal + "%0A" +
+    "آدرس: " + address + "%0A%0A" +
+    "شماره پیگیری / کد رسید پرداخت: ";
+
+  const sellerPhone = "09915164280";
+
+  document.getElementById("smsLink").href =
+    "sms:" + sellerPhone + "?body=" + message;
+
+  document.getElementById("successBox").style.display = "block";
+
+  document.getElementById("successBox")
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+}
+
+updateAmount();
 
 </script>
 
