@@ -6,9 +6,7 @@
 <title>کتاب‌های مهرداد نصیریان</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
   margin:0;
@@ -25,15 +23,8 @@ header{
   box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
-header h1{
-  margin:0;
-  font-size:28px;
-}
-
-header p{
-  margin:10px 0 0;
-  font-size:16px;
-}
+header h1{margin:0;font-size:28px}
+header p{margin:10px 0 0;font-size:16px}
 
 .container{
   max-width:950px;
@@ -56,14 +47,8 @@ header p{
   transition:.2s;
 }
 
-.book:hover{
-  transform:translateY(-4px);
-}
-
-.book h2{
-  color:#0066cc;
-  font-size:20px;
-}
+.book:hover{transform:translateY(-4px)}
+.book h2{color:#0066cc;font-size:20px}
 
 .price{
   font-size:19px;
@@ -120,6 +105,12 @@ input,select,textarea{
   font-family:inherit;
 }
 
+input:focus,select:focus,textarea:focus{
+  outline:none;
+  border-color:#0088ee;
+  box-shadow:0 0 0 2px rgba(0,136,238,.12);
+}
+
 textarea{
   min-height:90px;
   resize:vertical;
@@ -144,6 +135,13 @@ textarea{
   line-height:2;
 }
 
+.card-number{
+  direction:ltr;
+  unicode-bidi:embed;
+  display:inline-block;
+  letter-spacing:1px;
+}
+
 button{
   width:100%;
   border:0;
@@ -157,9 +155,7 @@ button{
   color:white;
 }
 
-button:hover{
-  background:#006dcc;
-}
+button:hover{background:#006dcc}
 
 .success{
   display:none;
@@ -243,7 +239,7 @@ footer{
 
     <h2>🛒 ثبت سفارش کتاب</h2>
 
-    <label>انتخاب کتاب</label>
+    <label for="bookSelect">انتخاب کتاب</label>
     <select id="bookSelect" onchange="updateAmount()">
       <option value="سایبان عشق">سایبان عشق - ۵۰۰٬۰۰۰ تومان</option>
       <option value="اخلاق نیکو">اخلاق نیکو - ۵۰۰٬۰۰۰ تومان</option>
@@ -252,17 +248,47 @@ footer{
       <option value="مجموعه چهار کتاب">مجموعه چهار کتاب - ۱٬۸۰۰٬۰۰۰ تومان</option>
     </select>
 
-    <label>نام و نام خانوادگی</label>
-    <input id="fullName" type="text" placeholder="نام و نام خانوادگی">
+    <label for="firstName">نام</label>
+    <input
+      id="firstName"
+      type="text"
+      placeholder="نام خود را وارد کنید"
+      autocomplete="given-name"
+    >
 
-    <label>شماره موبایل</label>
-    <input id="phone" type="tel" placeholder="مثلاً 09123456789">
+    <label for="lastName">نام خانوادگی</label>
+    <input
+      id="lastName"
+      type="text"
+      placeholder="نام خانوادگی خود را وارد کنید"
+      autocomplete="family-name"
+    >
 
-    <label>کد پستی</label>
-    <input id="postalCode" type="text" placeholder="کد پستی ۱۰ رقمی">
+    <label for="phone">شماره موبایل</label>
+    <input
+      id="phone"
+      type="tel"
+      inputmode="numeric"
+      placeholder="مثلاً 09123456789"
+      autocomplete="tel"
+    >
 
-    <label>آدرس کامل</label>
-    <textarea id="address" placeholder="استان، شهر، خیابان، کوچه، پلاک و واحد"></textarea>
+    <label for="postalCode">کد پستی</label>
+    <input
+      id="postalCode"
+      type="text"
+      inputmode="numeric"
+      maxlength="10"
+      placeholder="کد پستی ۱۰ رقمی"
+      autocomplete="postal-code"
+    >
+
+    <label for="address">آدرس کامل</label>
+    <textarea
+      id="address"
+      placeholder="استان، شهر، خیابان، کوچه، پلاک و واحد"
+      autocomplete="street-address"
+    ></textarea>
 
     <div class="amount">
       مبلغ قابل پرداخت:
@@ -271,12 +297,16 @@ footer{
 
     <div class="bank">
       <strong>شماره کارت:</strong>
-      <strong dir="ltr" style="direction:ltr; unicode-bidi:embed;">
+      <strong class="card-number">
         5892-1017-5728-1197
       </strong>
+
       <br>
+
       ابتدا مبلغ سفارش را به کارت بالا واریز کنید.
+
       <br>
+
       سپس روی دکمه «ثبت سفارش و دریافت رسید پیامکی» بزنید و
       <strong>شماره پیگیری پرداخت</strong> را در پیامک وارد کنید.
     </div>
@@ -339,33 +369,58 @@ function updateAmount(){
 
 function sendOrder(){
 
-  const book = document.getElementById("bookSelect").value;
-  const name = document.getElementById("fullName").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const postal = document.getElementById("postalCode").value.trim();
-  const address = document.getElementById("address").value.trim();
+  const book =
+    document.getElementById("bookSelect").value;
 
-  if(!name){
-    alert("لطفاً نام و نام خانوادگی را وارد کنید.");
+  const firstName =
+    document.getElementById("firstName").value.trim();
+
+  const lastName =
+    document.getElementById("lastName").value.trim();
+
+  const phone =
+    document.getElementById("phone").value.trim();
+
+  const postal =
+    document.getElementById("postalCode").value.trim();
+
+  const address =
+    document.getElementById("address").value.trim();
+
+  if(!firstName){
+    alert("لطفاً نام خود را وارد کنید.");
+    document.getElementById("firstName").focus();
+    return;
+  }
+
+  if(!lastName){
+    alert("لطفاً نام خانوادگی خود را وارد کنید.");
+    document.getElementById("lastName").focus();
     return;
   }
 
   if(!phone){
     alert("لطفاً شماره موبایل را وارد کنید.");
+    document.getElementById("phone").focus();
     return;
   }
 
   if(!postal){
     alert("لطفاً کد پستی را وارد کنید.");
+    document.getElementById("postalCode").focus();
     return;
   }
 
   if(!address){
     alert("لطفاً آدرس کامل را وارد کنید.");
+    document.getElementById("address").focus();
     return;
   }
 
   const price = prices[book];
+
+  const fullName =
+    firstName + " " + lastName;
 
   const orderNumber =
     "ORD-" + Date.now().toString().slice(-8);
@@ -374,25 +429,33 @@ function sendOrder(){
     "<br><strong>شماره سفارش:</strong> " + orderNumber +
     "<br><strong>کتاب:</strong> " + book +
     "<br><strong>مبلغ:</strong> " + formatPrice(price) +
-    "<br><strong>نام:</strong> " + name;
+    "<br><strong>نام:</strong> " + firstName +
+    "<br><strong>نام خانوادگی:</strong> " + lastName +
+    "<br><strong>شماره موبایل:</strong> " + phone +
+    "<br><strong>کد پستی:</strong> " + postal +
+    "<br><strong>آدرس:</strong> " + address;
 
   const message =
-    "رسید پرداخت سفارش کتاب%0A" +
-    "شماره سفارش: " + orderNumber + "%0A" +
-    "کتاب: " + book + "%0A" +
-    "مبلغ: " + formatPrice(price) + "%0A" +
-    "نام: " + name + "%0A" +
-    "موبایل: " + phone + "%0A" +
-    "کد پستی: " + postal + "%0A" +
-    "آدرس: " + address + "%0A%0A" +
+    "رسید پرداخت سفارش کتاب\n" +
+    "شماره سفارش: " + orderNumber + "\n" +
+    "کتاب: " + book + "\n" +
+    "مبلغ: " + formatPrice(price) + "\n" +
+    "نام: " + firstName + "\n" +
+    "نام خانوادگی: " + lastName + "\n" +
+    "نام کامل: " + fullName + "\n" +
+    "موبایل: " + phone + "\n" +
+    "کد پستی: " + postal + "\n" +
+    "آدرس: " + address + "\n\n" +
     "شماره پیگیری / کد رسید پرداخت: ";
 
   const sellerPhone = "09915164280";
 
   document.getElementById("smsLink").href =
-    "sms:" + sellerPhone + "?body=" + message;
+    "sms:" + sellerPhone + "?body=" +
+    encodeURIComponent(message);
 
-  document.getElementById("successBox").style.display = "block";
+  document.getElementById("successBox").style.display =
+    "block";
 
   document.getElementById("successBox")
     .scrollIntoView({
