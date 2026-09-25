@@ -3,32 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>کتاب‌های مهرداد نصیریان</title>
+
+<title>فروش کتاب‌های مهرداد نصیریان</title>
 
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 body{
   margin:0;
   font-family:Tahoma,Arial,sans-serif;
-  background:linear-gradient(135deg,#eaf6ff,#fff);
+  background:linear-gradient(135deg,#eaf6ff,#ffffff);
   color:#222;
 }
 
 header{
   background:linear-gradient(135deg,#0066cc,#0088ee);
-  color:#fff;
+  color:white;
   text-align:center;
   padding:30px 15px;
 }
 
-header h1{margin:0;font-size:28px}
-header p{margin:10px 0 0}
+header h1{
+  margin:0;
+  font-size:27px;
+}
+
+header p{
+  margin:10px 0 0;
+}
 
 .container{
   max-width:950px;
-  margin:25px auto;
-  padding:15px;
+  margin:auto;
+  padding:18px;
 }
 
 .books{
@@ -38,7 +47,7 @@ header p{margin:10px 0 0}
 }
 
 .book{
-  background:#fff;
+  background:white;
   border-radius:18px;
   padding:20px;
   text-align:center;
@@ -54,6 +63,7 @@ header p{margin:10px 0 0}
   font-size:19px;
   font-weight:bold;
   color:#008000;
+  margin-top:12px;
 }
 
 .package{
@@ -77,7 +87,7 @@ header p{margin:10px 0 0}
 }
 
 .order-box{
-  background:#fff;
+  background:white;
   margin-top:30px;
   padding:25px;
   border-radius:20px;
@@ -96,7 +106,9 @@ label{
   font-weight:bold;
 }
 
-input,select,textarea{
+input,
+select,
+textarea{
   width:100%;
   padding:13px;
   border:1px solid #ccc;
@@ -133,6 +145,16 @@ textarea{
   direction:ltr;
   display:inline-block;
   font-weight:bold;
+  font-size:18px;
+}
+
+.copy-card{
+  width:auto;
+  display:inline-block;
+  padding:8px 14px;
+  margin:5px 0;
+  background:#0066cc;
+  font-size:14px;
 }
 
 button{
@@ -168,11 +190,32 @@ button:hover{
   text-align:center;
   text-decoration:none;
   background:#28a745;
-  color:#fff;
+  color:white;
   padding:14px;
   border-radius:12px;
   margin-top:15px;
   font-size:17px;
+}
+
+.whatsapp-button{
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  background:#128c7e;
+  color:white;
+  padding:14px;
+  border-radius:12px;
+  margin-top:12px;
+  font-size:17px;
+}
+
+.note{
+  margin-top:15px;
+  background:#fff3cd;
+  border-radius:10px;
+  padding:12px;
+  color:#664d03;
+  font-size:14px;
 }
 
 footer{
@@ -187,232 +230,599 @@ footer{
 <body>
 
 <header>
-<h1>📚 کتاب‌های مهرداد نصیریان</h1>
-<p>آموزش، اخلاق، خانواده و روابط انسانی</p>
+  <h1>📚 فروش کتاب‌های مهرداد نصیریان</h1>
+  <p>آموزش، اخلاق، خانواده و روابط انسانی</p>
 </header>
 
 <div class="container">
 
-<div class="books">
+  <!-- کتاب‌ها -->
 
-<div class="book">
-<h2>📘 سایبان عشق</h2>
-<p>کتابی درباره عشق، رابطه و زندگی مشترک</p>
-<div class="price">۵۰۰٬۰۰۰ تومان</div>
-</div>
+  <div class="books">
 
-<div class="book">
-<h2>📗 اخلاق نیکو</h2>
-<p>نگاهی کاربردی به اخلاق و رفتار انسانی</p>
-<div class="price">۵۰۰٬۰۰۰ تومان</div>
-</div>
+    <div class="book">
+      <h2>📘 سایبان عشق</h2>
+      <p>کتابی درباره عشق، رابطه و زندگی مشترک</p>
+      <div class="price">۵۰۰٬۰۰۰ تومان</div>
+    </div>
 
-<div class="book">
-<h2>📙 کتاب سوم</h2>
-<p>برای رشد فردی و بهتر زندگی کردن</p>
-<div class="price">۵۰۰٬۰۰۰ تومان</div>
-</div>
+    <div class="book">
+      <h2>📗 اخلاق نیکو</h2>
+      <p>نگاهی کاربردی به اخلاق و رفتار انسانی</p>
+      <div class="price">۵۰۰٬۰۰۰ تومان</div>
+    </div>
 
-<div class="book">
-<h2>📕 کتاب چهارم</h2>
-<p>موضوعات کاربردی برای زندگی و خانواده</p>
-<div class="price">۵۰۰٬۰۰۰ تومان</div>
-</div>
+    <div class="book">
+      <h2>📙 کتاب سوم</h2>
+      <p>برای رشد فردی و بهتر زندگی کردن</p>
+      <div class="price">۵۰۰٬۰۰۰ تومان</div>
+    </div>
 
-</div>
+    <div class="book">
+      <h2>📕 کتاب چهارم</h2>
+      <p>موضوعات کاربردی برای زندگی و خانواده</p>
+      <div class="price">۵۰۰٬۰۰۰ تومان</div>
+    </div>
 
-<div class="package">
-<h2>🎁 مجموعه چهار کتاب</h2>
-<p>
-<span class="old-price">۲٬۰۰۰٬۰۰۰ تومان</span>
-<strong>۱٬۸۰۰٬۰۰۰ تومان</strong>
-</p>
-<p class="discount">۲۰۰٬۰۰۰ تومان تخفیف ویژه</p>
-</div>
+  </div>
 
-<div class="order-box">
+  <!-- مجموعه -->
 
-<h2>🛒 ثبت سفارش کتاب</h2>
+  <div class="package">
+    <h2>🎁 مجموعه کامل چهار کتاب</h2>
 
-<label>انتخاب کتاب</label>
+    <p>
+      <span class="old-price">۲٬۰۰۰٬۰۰۰ تومان</span>
+      <strong>۱٬۸۰۰٬۰۰۰ تومان</strong>
+    </p>
 
-<select id="bookSelect">
-<option value="سایبان عشق">سایبان عشق - ۵۰۰٬۰۰۰ تومان</option>
-<option value="اخلاق نیکو">اخلاق نیکو - ۵۰۰٬۰۰۰ تومان</option>
-<option value="کتاب سوم">کتاب سوم - ۵۰۰٬۰۰۰ تومان</option>
-<option value="کتاب چهارم">کتاب چهارم - ۵۰۰٬۰۰۰ تومان</option>
-<option value="مجموعه چهار کتاب">مجموعه چهار کتاب - ۱٬۸۰۰٬۰۰۰ تومان</option>
-</select>
+    <p class="discount">
+      ۲۰۰٬۰۰۰ تومان تخفیف ویژه
+    </p>
+  </div>
 
-<label>نام</label>
-<input id="firstName" type="text" placeholder="نام">
+  <!-- سفارش -->
 
-<label>نام خانوادگی</label>
-<input id="lastName" type="text" placeholder="نام خانوادگی">
+  <div class="order-box">
 
-<label>شماره موبایل</label>
-<input id="phone" type="tel" placeholder="09123456789">
+    <h2>🛒 ثبت سفارش</h2>
 
-<label>کد پستی</label>
-<input id="postalCode" type="text" placeholder="کد پستی ۱۰ رقمی">
+    <label for="bookSelect">
+      انتخاب کتاب
+    </label>
 
-<label>آدرس کامل</label>
-<textarea id="address" placeholder="استان، شهر، خیابان، کوچه، پلاک و واحد"></textarea>
+    <select id="bookSelect">
 
-<div class="amount">
-مبلغ قابل پرداخت:
-<span id="amount">۵۰۰٬۰۰۰ تومان</span>
-</div>
+      <option value="سایبان عشق">
+        📘 سایبان عشق - ۵۰۰٬۰۰۰ تومان
+      </option>
 
-<div class="bank">
-<strong>شماره کارت:</strong>
-<span class="card">5892-1017-5728-1197</span>
+      <option value="اخلاق نیکو">
+        📗 اخلاق نیکو - ۵۰۰٬۰۰۰ تومان
+      </option>
 
-<br>
+      <option value="کتاب سوم">
+        📙 کتاب سوم - ۵۰۰٬۰۰۰ تومان
+      </option>
 
-ابتدا مبلغ سفارش را به کارت بالا واریز کنید.
+      <option value="کتاب چهارم">
+        📕 کتاب چهارم - ۵۰۰٬۰۰۰ تومان
+      </option>
 
-<br>
+      <option value="مجموعه چهار کتاب">
+        🎁 مجموعه چهار کتاب - ۱٬۸۰۰٬۰۰۰ تومان
+      </option>
 
-سپس روی دکمه زیر بزنید و
-<strong>شماره پیگیری پرداخت</strong>
-را در پیامک وارد کنید.
-</div>
+    </select>
 
-<button type="button" id="orderButton">
-ثبت سفارش و دریافت رسید پیامکی
-</button>
+    <label for="firstName">
+      نام
+    </label>
 
-<div class="success" id="successBox">
+    <input
+      id="firstName"
+      type="text"
+      placeholder="نام"
+    >
 
-<strong>✅ سفارش آماده شد.</strong>
+    <label for="lastName">
+      نام خانوادگی
+    </label>
 
-<div id="orderInfo"></div>
+    <input
+      id="lastName"
+      type="text"
+      placeholder="نام خانوادگی"
+    >
 
-<p>
-برای ارسال سفارش، روی دکمه زیر بزنید.
-</p>
+    <label for="phone">
+      شماره موبایل
+    </label>
 
-<a id="smsLink" class="sms-button" href="#">
-📩 ارسال رسید پیامکی
-</a>
+    <input
+      id="phone"
+      type="tel"
+      placeholder="09123456789"
+    >
 
-</div>
+    <label for="postalCode">
+      کد پستی
+    </label>
 
-</div>
+    <input
+      id="postalCode"
+      type="text"
+      inputmode="numeric"
+      placeholder="کد پستی ۱۰ رقمی"
+    >
+
+    <label for="address">
+      آدرس کامل
+    </label>
+
+    <textarea
+      id="address"
+      placeholder="استان، شهر، خیابان، کوچه، پلاک و واحد"
+    ></textarea>
+
+    <!-- مبلغ -->
+
+    <div class="amount">
+      مبلغ قابل پرداخت:
+      <span id="amount">
+        ۵۰۰٬۰۰۰ تومان
+      </span>
+    </div>
+
+    <!-- کارت -->
+
+    <div class="bank">
+
+      <strong>💳 شماره کارت جهت پرداخت:</strong>
+
+      <br><br>
+
+      <span class="card">
+        5892-1017-5728-1197
+      </span>
+
+      <br>
+
+      <button
+        type="button"
+        class="copy-card"
+        onclick="copyCard()"
+      >
+        📋 کپی شماره کارت
+      </button>
+
+      <br>
+
+      ابتدا مبلغ سفارش را به شماره کارت بالا واریز کنید.
+
+      <br>
+
+      سپس اطلاعات پرداخت را در قسمت پایین وارد کنید.
+
+    </div>
+
+    <!-- شماره پیگیری -->
+
+    <label for="tracking">
+      شماره پیگیری / کد رهگیری پرداخت
+    </label>
+
+    <input
+      id="tracking"
+      type="text"
+      placeholder="شماره پیگیری پرداخت را وارد کنید"
+    >
+
+    <div class="note">
+      ⚠️ لطفاً پس از پرداخت، شماره پیگیری درج‌شده در رسید بانکی را وارد کنید.
+    </div>
+
+    <!-- ثبت -->
+
+    <button
+      type="button"
+      id="orderButton"
+    >
+      ✅ ثبت سفارش و ارسال رسید
+    </button>
+
+    <!-- نتیجه -->
+
+    <div
+      class="success"
+      id="successBox"
+    >
+
+      <strong>
+        ✅ سفارش با موفقیت آماده شد.
+      </strong>
+
+      <div id="orderInfo"></div>
+
+      <p>
+        اکنون رسید سفارش را برای ما ارسال کنید.
+      </p>
+
+      <!-- پیامک -->
+
+      <a
+        id="smsLink"
+        class="sms-button"
+        href="#"
+      >
+        📩 ارسال رسید با پیامک
+      </a>
+
+      <!-- واتساپ -->
+
+      <a
+        id="whatsappLink"
+        class="whatsapp-button"
+        href="#"
+        target="_blank"
+      >
+        💬 ارسال رسید در واتساپ
+      </a>
+
+      <div class="note">
+        سفارش شما پس از بررسی پرداخت، توسط فروشنده تأیید خواهد شد.
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
 
 <footer>
-© تمامی حقوق برای مهرداد نصیریان محفوظ است.
+  © تمامی حقوق برای مهرداد نصیریان محفوظ است.
 </footer>
 
 <script>
 
+/* =========================
+   تنظیمات
+========================= */
+
 var prices = {
-"سایبان عشق":500000,
-"اخلاق نیکو":500000,
-"کتاب سوم":500000,
-"کتاب چهارم":500000,
-"مجموعه چهار کتاب":1800000
+
+  "سایبان عشق": 500000,
+
+  "اخلاق نیکو": 500000,
+
+  "کتاب سوم": 500000,
+
+  "کتاب چهارم": 500000,
+
+  "مجموعه چهار کتاب": 1800000
+
 };
 
+
+/*
+  شماره‌ای که رسید به آن ارسال می‌شود
+  شماره قبلی سایت حفظ شده است.
+*/
+
+var sellerPhone = "09915164280";
+
+
+/* =========================
+   تبدیل قیمت
+========================= */
+
 function formatPrice(number){
-return number.toLocaleString("fa-IR")+" تومان";
+
+  return number.toLocaleString("fa-IR") + " تومان";
+
 }
+
+
+/* =========================
+   تغییر مبلغ
+========================= */
 
 function updateAmount(){
 
-var book=document.getElementById("bookSelect").value;
+  var book =
+    document.getElementById("bookSelect").value;
 
-document.getElementById("amount").textContent=
-formatPrice(prices[book]);
+  var price =
+    prices[book];
+
+  document.getElementById("amount").textContent =
+    formatPrice(price);
 
 }
 
-document.getElementById("bookSelect").addEventListener(
-"change",
-updateAmount
+
+/* =========================
+   کپی شماره کارت
+========================= */
+
+function copyCard(){
+
+  var card =
+    "5892101757281197";
+
+  navigator.clipboard.writeText(card)
+    .then(function(){
+
+      alert("شماره کارت کپی شد.");
+
+    })
+    .catch(function(){
+
+      alert("شماره کارت: " + card);
+
+    });
+
+}
+
+
+/* =========================
+   تغییر کتاب
+========================= */
+
+document
+.getElementById("bookSelect")
+.addEventListener(
+  "change",
+  updateAmount
 );
 
-document.getElementById("orderButton").addEventListener(
-"click",
-function(){
 
-var book=document.getElementById("bookSelect").value;
-var firstName=document.getElementById("firstName").value.trim();
-var lastName=document.getElementById("lastName").value.trim();
-var phone=document.getElementById("phone").value.trim();
-var postal=document.getElementById("postalCode").value.trim();
-var address=document.getElementById("address").value.trim();
+/* =========================
+   ثبت سفارش
+========================= */
 
-if(firstName===""){
-alert("لطفاً نام را وارد کنید.");
-return;
-}
+document
+.getElementById("orderButton")
+.addEventListener(
+  "click",
+  function(){
 
-if(lastName===""){
-alert("لطفاً نام خانوادگی را وارد کنید.");
-return;
-}
+    var book =
+      document.getElementById("bookSelect").value;
 
-if(phone===""){
-alert("لطفاً شماره موبایل را وارد کنید.");
-return;
-}
+    var firstName =
+      document.getElementById("firstName").value.trim();
 
-if(postal===""){
-alert("لطفاً کد پستی را وارد کنید.");
-return;
-}
+    var lastName =
+      document.getElementById("lastName").value.trim();
 
-if(address===""){
-alert("لطفاً آدرس کامل را وارد کنید.");
-return;
-}
+    var phone =
+      document.getElementById("phone").value.trim();
 
-var price=prices[book];
+    var postal =
+      document.getElementById("postalCode").value.trim();
 
-var orderNumber=
-"ORD-"+Date.now().toString().slice(-8);
+    var address =
+      document.getElementById("address").value.trim();
 
-var message=
-"رسید سفارش کتاب\n"+
-"شماره سفارش: "+orderNumber+"\n"+
-"کتاب: "+book+"\n"+
-"مبلغ: "+formatPrice(price)+"\n"+
-"نام: "+firstName+"\n"+
-"نام خانوادگی: "+lastName+"\n"+
-"موبایل: "+phone+"\n"+
-"کد پستی: "+postal+"\n"+
-"آدرس: "+address+
-"\n\nشماره پیگیری پرداخت: ";
+    var tracking =
+      document.getElementById("tracking").value.trim();
 
-document.getElementById("orderInfo").innerHTML=
-"<br><strong>شماره سفارش:</strong> "+orderNumber+
-"<br><strong>کتاب:</strong> "+book+
-"<br><strong>مبلغ:</strong> "+formatPrice(price)+
-"<br><strong>نام:</strong> "+firstName+
-"<br><strong>نام خانوادگی:</strong> "+lastName;
 
-var smsNumber="09915164280";
+    /* =========================
+       بررسی اطلاعات
+    ========================= */
 
-var smsHref=
-"sms:"+smsNumber+"?body="+
-encodeURIComponent(message);
+    if(firstName === ""){
 
-document.getElementById("smsLink").setAttribute(
-"href",
-smsHref
+      alert("لطفاً نام را وارد کنید.");
+      return;
+
+    }
+
+
+    if(lastName === ""){
+
+      alert("لطفاً نام خانوادگی را وارد کنید.");
+      return;
+
+    }
+
+
+    if(phone === ""){
+
+      alert("لطفاً شماره موبایل را وارد کنید.");
+      return;
+
+    }
+
+
+    if(postal === ""){
+
+      alert("لطفاً کد پستی را وارد کنید.");
+      return;
+
+    }
+
+
+    if(address === ""){
+
+      alert("لطفاً آدرس کامل را وارد کنید.");
+      return;
+
+    }
+
+
+    if(tracking === ""){
+
+      alert("لطفاً شماره پیگیری پرداخت را وارد کنید.");
+      return;
+
+    }
+
+
+    /* =========================
+       قیمت
+    ========================= */
+
+    var price =
+      prices[book];
+
+
+    /* =========================
+       شماره سفارش
+    ========================= */
+
+    var orderNumber =
+      "ORD-" +
+      Date.now()
+      .toString()
+      .slice(-8);
+
+
+    /* =========================
+       متن رسید
+    ========================= */
+
+    var message =
+      "رسید سفارش کتاب\n\n" +
+
+      "شماره سفارش: " +
+      orderNumber +
+
+      "\nکتاب: " +
+      book +
+
+      "\nمبلغ: " +
+      formatPrice(price) +
+
+      "\nنام: " +
+      firstName +
+
+      "\nنام خانوادگی: " +
+      lastName +
+
+      "\nموبایل: " +
+      phone +
+
+      "\nکد پستی: " +
+      postal +
+
+      "\nآدرس: " +
+      address +
+
+      "\nشماره پیگیری پرداخت: " +
+      tracking +
+
+      "\n\nوضعیت: در انتظار تأیید پرداخت";
+
+
+    /* =========================
+       نمایش سفارش
+    ========================= */
+
+    document
+    .getElementById("orderInfo")
+    .innerHTML =
+
+      "<hr>" +
+
+      "<strong>شماره سفارش:</strong> " +
+      orderNumber +
+
+      "<br><strong>کتاب:</strong> " +
+      book +
+
+      "<br><strong>مبلغ:</strong> " +
+      formatPrice(price) +
+
+      "<br><strong>نام:</strong> " +
+      firstName +
+      " " +
+      lastName +
+
+      "<br><strong>موبایل:</strong> " +
+      phone +
+
+      "<br><strong>شماره پیگیری:</strong> " +
+      tracking +
+
+      "<br><strong>وضعیت:</strong> در انتظار تأیید پرداخت";
+
+
+    /* =========================
+       پیامک
+    ========================= */
+
+    var smsHref =
+      "sms:" +
+      sellerPhone +
+      "?body=" +
+      encodeURIComponent(message);
+
+
+    document
+    .getElementById("smsLink")
+    .setAttribute(
+      "href",
+      smsHref
+    );
+
+
+    /* =========================
+       واتساپ
+    ========================= */
+
+    /*
+      برای واتساپ باید شماره بدون صفر
+      و با کد کشور باشد.
+
+      چون شماره شما ایرانی است:
+      989915164280
+    */
+
+    var whatsappNumber =
+      "989915164280";
+
+
+    var whatsappHref =
+      "https://wa.me/" +
+      whatsappNumber +
+      "?text=" +
+      encodeURIComponent(message);
+
+
+    document
+    .getElementById("whatsappLink")
+    .setAttribute(
+      "href",
+      whatsappHref
+    );
+
+
+    /* =========================
+       نمایش نتیجه
+    ========================= */
+
+    document
+    .getElementById("successBox")
+    .style.display =
+      "block";
+
+
+    document
+    .getElementById("successBox")
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+
+  }
 );
 
-document.getElementById("successBox").style.display="block";
 
-document.getElementById("successBox").scrollIntoView({
-behavior:"smooth"
-});
-
-}
-);
+/* =========================
+   شروع
+========================= */
 
 updateAmount();
 
