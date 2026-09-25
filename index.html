@@ -2,227 +2,170 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>فروش کتاب‌های مهرداد نصیریان</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
-  margin:0;
-  font-family:Tahoma,Arial,sans-serif;
-  background:linear-gradient(135deg,#eaf6ff,#ffffff);
-  color:#222;
+margin:0;
+font-family:Tahoma,Arial,sans-serif;
+background:linear-gradient(135deg,#eaf6ff,#fff);
+color:#222
 }
 
 header{
-  background:linear-gradient(135deg,#0066cc,#0088ee);
-  color:white;
-  text-align:center;
-  padding:30px 15px;
+background:linear-gradient(135deg,#0066cc,#0088ee);
+color:#fff;
+text-align:center;
+padding:30px 15px
 }
 
-header h1{
-  margin:0;
-  font-size:27px;
-}
-
-header p{
-  margin:10px 0 0;
-}
+header h1{margin:0;font-size:27px}
+header p{margin:10px 0 0}
 
 .container{
-  max-width:950px;
-  margin:auto;
-  padding:18px;
+max-width:950px;
+margin:auto;
+padding:18px
 }
 
 .books{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-  gap:18px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+gap:18px
 }
 
 .book{
-  background:white;
-  border-radius:18px;
-  padding:20px;
-  text-align:center;
-  box-shadow:0 5px 18px rgba(0,0,0,.1);
+background:#fff;
+border-radius:18px;
+padding:20px;
+text-align:center;
+box-shadow:0 5px 18px rgba(0,0,0,.1)
 }
 
 .book h2{
-  color:#0066cc;
-  font-size:20px;
+color:#0066cc;
+font-size:20px
 }
 
 .price{
-  font-size:19px;
-  font-weight:bold;
-  color:#008000;
-  margin-top:12px;
+font-size:19px;
+font-weight:bold;
+color:#008000
 }
 
 .package{
-  margin-top:25px;
-  background:#fff8dc;
-  border:2px solid #f0c000;
-  border-radius:18px;
-  padding:20px;
-  text-align:center;
+margin-top:25px;
+background:#fff8dc;
+border:2px solid #f0c000;
+border-radius:18px;
+padding:20px;
+text-align:center
 }
 
 .old-price{
-  text-decoration:line-through;
-  color:#888;
-  margin-left:10px;
+text-decoration:line-through;
+color:#888;
+margin-left:10px
 }
 
 .discount{
-  color:#d60000;
-  font-weight:bold;
+color:#d60000;
+font-weight:bold
 }
 
 .order-box{
-  background:white;
-  margin-top:30px;
-  padding:25px;
-  border-radius:20px;
-  box-shadow:0 5px 20px rgba(0,0,0,.12);
+background:#fff;
+margin-top:30px;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.12)
 }
 
 .order-box h2{
-  color:#0066cc;
-  text-align:center;
+color:#0066cc;
+text-align:center
 }
 
 label{
-  display:block;
-  margin-top:15px;
-  margin-bottom:6px;
-  font-weight:bold;
+display:block;
+margin-top:15px;
+margin-bottom:6px;
+font-weight:bold
 }
 
-input,
-select,
-textarea{
-  width:100%;
-  padding:13px;
-  border:1px solid #ccc;
-  border-radius:10px;
-  font-size:16px;
-  font-family:inherit;
+input,select,textarea{
+width:100%;
+padding:13px;
+border:1px solid #ccc;
+border-radius:10px;
+font-size:16px;
+font-family:inherit
 }
 
 textarea{
-  min-height:90px;
-  resize:vertical;
+min-height:90px;
+resize:vertical
 }
 
 .amount{
-  margin-top:20px;
-  background:#e9f7ff;
-  padding:18px;
-  border-radius:12px;
-  text-align:center;
-  font-size:20px;
-  font-weight:bold;
-  color:#0066cc;
+margin-top:20px;
+background:#e9f7ff;
+padding:18px;
+border-radius:12px;
+text-align:center;
+font-size:20px;
+font-weight:bold;
+color:#0066cc
 }
 
 .bank{
-  margin-top:20px;
-  background:#f5f5f5;
-  border-radius:12px;
-  padding:18px;
-  line-height:2;
+margin-top:20px;
+background:#f5f5f5;
+border-radius:12px;
+padding:18px;
+line-height:2
 }
 
 .card{
-  direction:ltr;
-  display:inline-block;
-  font-weight:bold;
-  font-size:18px;
-}
-
-.copy-card{
-  width:auto;
-  display:inline-block;
-  padding:8px 14px;
-  margin:5px 0;
-  background:#0066cc;
-  font-size:14px;
+direction:ltr;
+display:inline-block;
+font-weight:bold;
+font-size:18px
 }
 
 button{
-  width:100%;
-  border:0;
-  border-radius:12px;
-  padding:15px;
-  margin-top:20px;
-  font-size:18px;
-  font-family:inherit;
-  cursor:pointer;
-  background:#0088ee;
-  color:white;
+width:100%;
+border:0;
+border-radius:12px;
+padding:15px;
+margin-top:20px;
+font-size:18px;
+font-family:inherit;
+cursor:pointer;
+background:#0088ee;
+color:#fff
 }
 
 button:hover{
-  background:#006dcc;
+background:#006dcc
 }
 
-.success{
-  display:none;
-  margin-top:20px;
-  background:#e8fff0;
-  border:2px solid #28a745;
-  color:#176b2c;
-  border-radius:14px;
-  padding:20px;
-  line-height:2;
-}
-
-.sms-button{
-  display:block;
-  text-align:center;
-  text-decoration:none;
-  background:#28a745;
-  color:white;
-  padding:14px;
-  border-radius:12px;
-  margin-top:15px;
-  font-size:17px;
-}
-
-.whatsapp-button{
-  display:block;
-  text-align:center;
-  text-decoration:none;
-  background:#128c7e;
-  color:white;
-  padding:14px;
-  border-radius:12px;
-  margin-top:12px;
-  font-size:17px;
-}
-
-.note{
-  margin-top:15px;
-  background:#fff3cd;
-  border-radius:10px;
-  padding:12px;
-  color:#664d03;
-  font-size:14px;
+.info{
+margin-top:15px;
+background:#fff3cd;
+padding:14px;
+border-radius:10px;
+line-height:2
 }
 
 footer{
-  text-align:center;
-  padding:25px;
-  margin-top:30px;
-  color:#777;
+text-align:center;
+padding:25px;
+margin-top:30px;
+color:#777
 }
 </style>
 </head>
@@ -230,601 +173,230 @@ footer{
 <body>
 
 <header>
-  <h1>📚 فروش کتاب‌های مهرداد نصیریان</h1>
-  <p>آموزش، اخلاق، خانواده و روابط انسانی</p>
+<h1>📚 فروش کتاب‌های مهرداد نصیریان</h1>
+<p>آموزش، اخلاق، خانواده و روابط انسانی</p>
 </header>
 
 <div class="container">
 
-  <!-- کتاب‌ها -->
+<div class="books">
 
-  <div class="books">
+<div class="book">
+<h2>📘 سایبان عشق</h2>
+<p>کتابی درباره عشق، رابطه و زندگی مشترک</p>
+<div class="price">۵۰۰٬۰۰۰ تومان</div>
+</div>
 
-    <div class="book">
-      <h2>📘 سایبان عشق</h2>
-      <p>کتابی درباره عشق، رابطه و زندگی مشترک</p>
-      <div class="price">۵۰۰٬۰۰۰ تومان</div>
-    </div>
+<div class="book">
+<h2>📗 اخلاق نیکو</h2>
+<p>نگاهی کاربردی به اخلاق و رفتار انسانی</p>
+<div class="price">۵۰۰٬۰۰۰ تومان</div>
+</div>
 
-    <div class="book">
-      <h2>📗 اخلاق نیکو</h2>
-      <p>نگاهی کاربردی به اخلاق و رفتار انسانی</p>
-      <div class="price">۵۰۰٬۰۰۰ تومان</div>
-    </div>
+<div class="book">
+<h2>📙 کتاب سوم</h2>
+<p>برای رشد فردی و بهتر زندگی کردن</p>
+<div class="price">۵۰۰٬۰۰۰ تومان</div>
+</div>
 
-    <div class="book">
-      <h2>📙 کتاب سوم</h2>
-      <p>برای رشد فردی و بهتر زندگی کردن</p>
-      <div class="price">۵۰۰٬۰۰۰ تومان</div>
-    </div>
+<div class="book">
+<h2>📕 کتاب چهارم</h2>
+<p>موضوعات کاربردی برای زندگی و خانواده</p>
+<div class="price">۵۰۰٬۰۰۰ تومان</div>
+</div>
 
-    <div class="book">
-      <h2>📕 کتاب چهارم</h2>
-      <p>موضوعات کاربردی برای زندگی و خانواده</p>
-      <div class="price">۵۰۰٬۰۰۰ تومان</div>
-    </div>
+</div>
 
-  </div>
+<div class="package">
 
-  <!-- مجموعه -->
+<h2>🎁 مجموعه چهار کتاب</h2>
 
-  <div class="package">
-    <h2>🎁 مجموعه کامل چهار کتاب</h2>
+<p>
+<span class="old-price">۲٬۰۰۰٬۰۰۰ تومان</span>
+<strong>۱٬۸۰۰٬۰۰۰ تومان</strong>
+</p>
 
-    <p>
-      <span class="old-price">۲٬۰۰۰٬۰۰۰ تومان</span>
-      <strong>۱٬۸۰۰٬۰۰۰ تومان</strong>
-    </p>
+<p class="discount">
+۲۰۰٬۰۰۰ تومان تخفیف ویژه
+</p>
 
-    <p class="discount">
-      ۲۰۰٬۰۰۰ تومان تخفیف ویژه
-    </p>
-  </div>
+</div>
 
-  <!-- سفارش -->
+<div class="order-box">
 
-  <div class="order-box">
+<h2>🛒 ثبت سفارش</h2>
 
-    <h2>🛒 ثبت سفارش</h2>
+<form
+action="https://formsubmit.co/nsyryanmhrdad628@gmail.com"
+method="POST"
+>
 
-    <label for="bookSelect">
-      انتخاب کتاب
-    </label>
+<input type="hidden" name="_subject"
+value="🛒 سفارش جدید کتاب">
 
-    <select id="bookSelect">
+<input type="hidden" name="_captcha"
+value="false">
 
-      <option value="سایبان عشق">
-        📘 سایبان عشق - ۵۰۰٬۰۰۰ تومان
-      </option>
+<input type="hidden" name="_template"
+value="table">
 
-      <option value="اخلاق نیکو">
-        📗 اخلاق نیکو - ۵۰۰٬۰۰۰ تومان
-      </option>
+<label>انتخاب کتاب</label>
 
-      <option value="کتاب سوم">
-        📙 کتاب سوم - ۵۰۰٬۰۰۰ تومان
-      </option>
+<select name="کتاب" id="bookSelect" required>
 
-      <option value="کتاب چهارم">
-        📕 کتاب چهارم - ۵۰۰٬۰۰۰ تومان
-      </option>
+<option value="سایبان عشق">
+سایبان عشق - ۵۰۰٬۰۰۰ تومان
+</option>
 
-      <option value="مجموعه چهار کتاب">
-        🎁 مجموعه چهار کتاب - ۱٬۸۰۰٬۰۰۰ تومان
-      </option>
+<option value="اخلاق نیکو">
+اخلاق نیکو - ۵۰۰٬۰۰۰ تومان
+</option>
 
-    </select>
+<option value="کتاب سوم">
+کتاب سوم - ۵۰۰٬۰۰۰ تومان
+</option>
 
-    <label for="firstName">
-      نام
-    </label>
+<option value="کتاب چهارم">
+کتاب چهارم - ۵۰۰٬۰۰۰ تومان
+</option>
 
-    <input
-      id="firstName"
-      type="text"
-      placeholder="نام"
-    >
+<option value="مجموعه چهار کتاب">
+مجموعه چهار کتاب - ۱٬۸۰۰٬۰۰۰ تومان
+</option>
 
-    <label for="lastName">
-      نام خانوادگی
-    </label>
+</select>
 
-    <input
-      id="lastName"
-      type="text"
-      placeholder="نام خانوادگی"
-    >
+<label>نام</label>
 
-    <label for="phone">
-      شماره موبایل
-    </label>
+<input
+type="text"
+name="نام"
+placeholder="نام"
+required
+>
 
-    <input
-      id="phone"
-      type="tel"
-      placeholder="09123456789"
-    >
+<label>نام خانوادگی</label>
 
-    <label for="postalCode">
-      کد پستی
-    </label>
+<input
+type="text"
+name="نام خانوادگی"
+placeholder="نام خانوادگی"
+required
+>
 
-    <input
-      id="postalCode"
-      type="text"
-      inputmode="numeric"
-      placeholder="کد پستی ۱۰ رقمی"
-    >
+<label>شماره موبایل</label>
 
-    <label for="address">
-      آدرس کامل
-    </label>
+<input
+type="tel"
+name="شماره موبایل"
+placeholder="09123456789"
+required
+>
 
-    <textarea
-      id="address"
-      placeholder="استان، شهر، خیابان، کوچه، پلاک و واحد"
-    ></textarea>
+<label>کد پستی</label>
 
-    <!-- مبلغ -->
+<input
+type="text"
+name="کد پستی"
+placeholder="کد پستی ۱۰ رقمی"
+required
+>
 
-    <div class="amount">
-      مبلغ قابل پرداخت:
-      <span id="amount">
-        ۵۰۰٬۰۰۰ تومان
-      </span>
-    </div>
+<label>آدرس کامل</label>
 
-    <!-- کارت -->
+<textarea
+name="آدرس"
+placeholder="استان، شهر، خیابان، کوچه، پلاک و واحد"
+required
+></textarea>
 
-    <div class="bank">
+<div class="amount">
+مبلغ قابل پرداخت:
+<span id="amount">۵۰۰٬۰۰۰ تومان</span>
+</div>
 
-      <strong>💳 شماره کارت جهت پرداخت:</strong>
+<input
+type="hidden"
+name="مبلغ"
+id="amountInput"
+value="500000 تومان"
+>
 
-      <br><br>
+<div class="bank">
 
-      <span class="card">
-        5892-1017-5728-1197
-      </span>
+<strong>💳 شماره کارت:</strong>
 
-      <br>
+<br><br>
 
-      <button
-        type="button"
-        class="copy-card"
-        onclick="copyCard()"
-      >
-        📋 کپی شماره کارت
-      </button>
+<span class="card">
+5892-1017-5728-1197
+</span>
 
-      <br>
+<br><br>
 
-      ابتدا مبلغ سفارش را به شماره کارت بالا واریز کنید.
+ابتدا مبلغ سفارش را به شماره کارت بالا واریز کنید.
 
-      <br>
+<br>
 
-      سپس اطلاعات پرداخت را در قسمت پایین وارد کنید.
+بعد از پرداخت، شماره پیگیری را در قسمت زیر وارد کنید.
 
-    </div>
+</div>
 
-    <!-- شماره پیگیری -->
+<label>شماره پیگیری پرداخت</label>
 
-    <label for="tracking">
-      شماره پیگیری / کد رهگیری پرداخت
-    </label>
+<input
+type="text"
+name="شماره پیگیری پرداخت"
+placeholder="شماره پیگیری بانکی"
+required
+>
 
-    <input
-      id="tracking"
-      type="text"
-      placeholder="شماره پیگیری پرداخت را وارد کنید"
-    >
+<div class="info">
 
-    <div class="note">
-      ⚠️ لطفاً پس از پرداخت، شماره پیگیری درج‌شده در رسید بانکی را وارد کنید.
-    </div>
+⚠️ بعد از پرداخت، شماره پیگیری را دقیق وارد کنید.
+سفارش پس از بررسی پرداخت توسط فروشنده تأیید می‌شود.
 
-    <!-- ثبت -->
+</div>
 
-    <button
-      type="button"
-      id="orderButton"
-    >
-      ✅ ثبت سفارش و ارسال رسید
-    </button>
+<button type="submit">
+✅ ثبت سفارش و ارسال رسید
+</button>
 
-    <!-- نتیجه -->
+</form>
 
-    <div
-      class="success"
-      id="successBox"
-    >
-
-      <strong>
-        ✅ سفارش با موفقیت آماده شد.
-      </strong>
-
-      <div id="orderInfo"></div>
-
-      <p>
-        اکنون رسید سفارش را برای ما ارسال کنید.
-      </p>
-
-      <!-- پیامک -->
-
-      <a
-        id="smsLink"
-        class="sms-button"
-        href="#"
-      >
-        📩 ارسال رسید با پیامک
-      </a>
-
-      <!-- واتساپ -->
-
-      <a
-        id="whatsappLink"
-        class="whatsapp-button"
-        href="#"
-        target="_blank"
-      >
-        💬 ارسال رسید در واتساپ
-      </a>
-
-      <div class="note">
-        سفارش شما پس از بررسی پرداخت، توسط فروشنده تأیید خواهد شد.
-      </div>
-
-    </div>
-
-  </div>
+</div>
 
 </div>
 
 <footer>
-  © تمامی حقوق برای مهرداد نصیریان محفوظ است.
+© تمامی حقوق برای مهرداد نصیریان محفوظ است.
 </footer>
 
 <script>
 
-/* =========================
-   تنظیمات
-========================= */
-
-var prices = {
-
-  "سایبان عشق": 500000,
-
-  "اخلاق نیکو": 500000,
-
-  "کتاب سوم": 500000,
-
-  "کتاب چهارم": 500000,
-
-  "مجموعه چهار کتاب": 1800000
-
+var prices={
+"سایبان عشق":500000,
+"اخلاق نیکو":500000,
+"کتاب سوم":500000,
+"کتاب چهارم":500000,
+"مجموعه چهار کتاب":1800000
 };
 
+var select=document.getElementById("bookSelect");
+var amount=document.getElementById("amount");
+var amountInput=document.getElementById("amountInput");
 
-/*
-  شماره‌ای که رسید به آن ارسال می‌شود
-  شماره قبلی سایت حفظ شده است.
-*/
+select.addEventListener("change",function(){
 
-var sellerPhone = "09915164280";
+var price=prices[this.value];
 
+amount.textContent=
+price.toLocaleString("fa-IR")+" تومان";
 
-/* =========================
-   تبدیل قیمت
-========================= */
+amountInput.value=
+price.toLocaleString("fa-IR")+" تومان";
 
-function formatPrice(number){
-
-  return number.toLocaleString("fa-IR") + " تومان";
-
-}
-
-
-/* =========================
-   تغییر مبلغ
-========================= */
-
-function updateAmount(){
-
-  var book =
-    document.getElementById("bookSelect").value;
-
-  var price =
-    prices[book];
-
-  document.getElementById("amount").textContent =
-    formatPrice(price);
-
-}
-
-
-/* =========================
-   کپی شماره کارت
-========================= */
-
-function copyCard(){
-
-  var card =
-    "5892101757281197";
-
-  navigator.clipboard.writeText(card)
-    .then(function(){
-
-      alert("شماره کارت کپی شد.");
-
-    })
-    .catch(function(){
-
-      alert("شماره کارت: " + card);
-
-    });
-
-}
-
-
-/* =========================
-   تغییر کتاب
-========================= */
-
-document
-.getElementById("bookSelect")
-.addEventListener(
-  "change",
-  updateAmount
-);
-
-
-/* =========================
-   ثبت سفارش
-========================= */
-
-document
-.getElementById("orderButton")
-.addEventListener(
-  "click",
-  function(){
-
-    var book =
-      document.getElementById("bookSelect").value;
-
-    var firstName =
-      document.getElementById("firstName").value.trim();
-
-    var lastName =
-      document.getElementById("lastName").value.trim();
-
-    var phone =
-      document.getElementById("phone").value.trim();
-
-    var postal =
-      document.getElementById("postalCode").value.trim();
-
-    var address =
-      document.getElementById("address").value.trim();
-
-    var tracking =
-      document.getElementById("tracking").value.trim();
-
-
-    /* =========================
-       بررسی اطلاعات
-    ========================= */
-
-    if(firstName === ""){
-
-      alert("لطفاً نام را وارد کنید.");
-      return;
-
-    }
-
-
-    if(lastName === ""){
-
-      alert("لطفاً نام خانوادگی را وارد کنید.");
-      return;
-
-    }
-
-
-    if(phone === ""){
-
-      alert("لطفاً شماره موبایل را وارد کنید.");
-      return;
-
-    }
-
-
-    if(postal === ""){
-
-      alert("لطفاً کد پستی را وارد کنید.");
-      return;
-
-    }
-
-
-    if(address === ""){
-
-      alert("لطفاً آدرس کامل را وارد کنید.");
-      return;
-
-    }
-
-
-    if(tracking === ""){
-
-      alert("لطفاً شماره پیگیری پرداخت را وارد کنید.");
-      return;
-
-    }
-
-
-    /* =========================
-       قیمت
-    ========================= */
-
-    var price =
-      prices[book];
-
-
-    /* =========================
-       شماره سفارش
-    ========================= */
-
-    var orderNumber =
-      "ORD-" +
-      Date.now()
-      .toString()
-      .slice(-8);
-
-
-    /* =========================
-       متن رسید
-    ========================= */
-
-    var message =
-      "رسید سفارش کتاب\n\n" +
-
-      "شماره سفارش: " +
-      orderNumber +
-
-      "\nکتاب: " +
-      book +
-
-      "\nمبلغ: " +
-      formatPrice(price) +
-
-      "\nنام: " +
-      firstName +
-
-      "\nنام خانوادگی: " +
-      lastName +
-
-      "\nموبایل: " +
-      phone +
-
-      "\nکد پستی: " +
-      postal +
-
-      "\nآدرس: " +
-      address +
-
-      "\nشماره پیگیری پرداخت: " +
-      tracking +
-
-      "\n\nوضعیت: در انتظار تأیید پرداخت";
-
-
-    /* =========================
-       نمایش سفارش
-    ========================= */
-
-    document
-    .getElementById("orderInfo")
-    .innerHTML =
-
-      "<hr>" +
-
-      "<strong>شماره سفارش:</strong> " +
-      orderNumber +
-
-      "<br><strong>کتاب:</strong> " +
-      book +
-
-      "<br><strong>مبلغ:</strong> " +
-      formatPrice(price) +
-
-      "<br><strong>نام:</strong> " +
-      firstName +
-      " " +
-      lastName +
-
-      "<br><strong>موبایل:</strong> " +
-      phone +
-
-      "<br><strong>شماره پیگیری:</strong> " +
-      tracking +
-
-      "<br><strong>وضعیت:</strong> در انتظار تأیید پرداخت";
-
-
-    /* =========================
-       پیامک
-    ========================= */
-
-    var smsHref =
-      "sms:" +
-      sellerPhone +
-      "?body=" +
-      encodeURIComponent(message);
-
-
-    document
-    .getElementById("smsLink")
-    .setAttribute(
-      "href",
-      smsHref
-    );
-
-
-    /* =========================
-       واتساپ
-    ========================= */
-
-    /*
-      برای واتساپ باید شماره بدون صفر
-      و با کد کشور باشد.
-
-      چون شماره شما ایرانی است:
-      989915164280
-    */
-
-    var whatsappNumber =
-      "989915164280";
-
-
-    var whatsappHref =
-      "https://wa.me/" +
-      whatsappNumber +
-      "?text=" +
-      encodeURIComponent(message);
-
-
-    document
-    .getElementById("whatsappLink")
-    .setAttribute(
-      "href",
-      whatsappHref
-    );
-
-
-    /* =========================
-       نمایش نتیجه
-    ========================= */
-
-    document
-    .getElementById("successBox")
-    .style.display =
-      "block";
-
-
-    document
-    .getElementById("successBox")
-    .scrollIntoView({
-      behavior:"smooth"
-    });
-
-  }
-);
-
-
-/* =========================
-   شروع
-========================= */
-
-updateAmount();
+});
 
 </script>
 
