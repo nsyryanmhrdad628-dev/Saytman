@@ -1,187 +1,422 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کتاب‌های مهرداد نصیریان</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Tahoma,Arial,sans-serif;
+  background:linear-gradient(135deg,#eaf6ff,#fff);
+  color:#222;
+}
+
+header{
+  background:linear-gradient(135deg,#0066cc,#0088ee);
+  color:#fff;
+  text-align:center;
+  padding:30px 15px;
+}
+
+header h1{margin:0;font-size:28px}
+header p{margin:10px 0 0}
+
+.container{
+  max-width:950px;
+  margin:25px auto;
+  padding:15px;
+}
+
+.books{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:18px;
+}
+
+.book{
+  background:#fff;
+  border-radius:18px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 5px 18px rgba(0,0,0,.1);
+}
+
+.book h2{
+  color:#0066cc;
+  font-size:20px;
+}
+
+.price{
+  font-size:19px;
+  font-weight:bold;
+  color:#008000;
+}
+
+.package{
+  margin-top:25px;
+  background:#fff8dc;
+  border:2px solid #f0c000;
+  border-radius:18px;
+  padding:20px;
+  text-align:center;
+}
+
+.old-price{
+  text-decoration:line-through;
+  color:#888;
+  margin-left:10px;
+}
+
+.discount{
+  color:#d60000;
+  font-weight:bold;
+}
+
+.order-box{
+  background:#fff;
+  margin-top:30px;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,.12);
+}
+
+.order-box h2{
+  color:#0066cc;
+  text-align:center;
+}
+
+label{
+  display:block;
+  margin-top:15px;
+  margin-bottom:6px;
+  font-weight:bold;
+}
+
+input,select,textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  font-size:16px;
+  font-family:inherit;
+}
+
+textarea{
+  min-height:90px;
+  resize:vertical;
+}
+
+.amount{
+  margin-top:20px;
+  background:#e9f7ff;
+  padding:18px;
+  border-radius:12px;
+  text-align:center;
+  font-size:20px;
+  font-weight:bold;
+  color:#0066cc;
+}
+
+.bank{
+  margin-top:20px;
+  background:#f5f5f5;
+  border-radius:12px;
+  padding:18px;
+  line-height:2;
+}
+
+.card{
+  direction:ltr;
+  display:inline-block;
+  font-weight:bold;
+}
+
+button{
+  width:100%;
+  border:0;
+  border-radius:12px;
+  padding:15px;
+  margin-top:20px;
+  font-size:18px;
+  font-family:inherit;
+  cursor:pointer;
+  background:#0088ee;
+  color:white;
+}
+
+button:hover{
+  background:#006dcc;
+}
+
+.success{
+  display:none;
+  margin-top:20px;
+  background:#e8fff0;
+  border:2px solid #28a745;
+  color:#176b2c;
+  border-radius:14px;
+  padding:20px;
+  line-height:2;
+}
+
+.sms-button{
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  background:#28a745;
+  color:#fff;
+  padding:14px;
+  border-radius:12px;
+  margin-top:15px;
+  font-size:17px;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  margin-top:30px;
+  color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📚 کتاب‌های مهرداد نصیریان</h1>
+<p>آموزش، اخلاق، خانواده و روابط انسانی</p>
+</header>
+
+<div class="container">
+
+<div class="books">
+
+<div class="book">
+<h2>📘 سایبان عشق</h2>
+<p>کتابی درباره عشق، رابطه و زندگی مشترک</p>
+<div class="price">۵۰۰٬۰۰۰ تومان</div>
+</div>
+
+<div class="book">
+<h2>📗 اخلاق نیکو</h2>
+<p>نگاهی کاربردی به اخلاق و رفتار انسانی</p>
+<div class="price">۵۰۰٬۰۰۰ تومان</div>
+</div>
+
+<div class="book">
+<h2>📙 کتاب سوم</h2>
+<p>برای رشد فردی و بهتر زندگی کردن</p>
+<div class="price">۵۰۰٬۰۰۰ تومان</div>
+</div>
+
+<div class="book">
+<h2>📕 کتاب چهارم</h2>
+<p>موضوعات کاربردی برای زندگی و خانواده</p>
+<div class="price">۵۰۰٬۰۰۰ تومان</div>
+</div>
+
+</div>
+
+<div class="package">
+<h2>🎁 مجموعه چهار کتاب</h2>
+<p>
+<span class="old-price">۲٬۰۰۰٬۰۰۰ تومان</span>
+<strong>۱٬۸۰۰٬۰۰۰ تومان</strong>
+</p>
+<p class="discount">۲۰۰٬۰۰۰ تومان تخفیف ویژه</p>
+</div>
+
+<div class="order-box">
+
+<h2>🛒 ثبت سفارش کتاب</h2>
+
+<label>انتخاب کتاب</label>
+
+<select id="bookSelect">
+<option value="سایبان عشق">سایبان عشق - ۵۰۰٬۰۰۰ تومان</option>
+<option value="اخلاق نیکو">اخلاق نیکو - ۵۰۰٬۰۰۰ تومان</option>
+<option value="کتاب سوم">کتاب سوم - ۵۰۰٬۰۰۰ تومان</option>
+<option value="کتاب چهارم">کتاب چهارم - ۵۰۰٬۰۰۰ تومان</option>
+<option value="مجموعه چهار کتاب">مجموعه چهار کتاب - ۱٬۸۰۰٬۰۰۰ تومان</option>
+</select>
+
+<label>نام</label>
+<input id="firstName" type="text" placeholder="نام">
+
+<label>نام خانوادگی</label>
+<input id="lastName" type="text" placeholder="نام خانوادگی">
+
+<label>شماره موبایل</label>
+<input id="phone" type="tel" placeholder="09123456789">
+
+<label>کد پستی</label>
+<input id="postalCode" type="text" placeholder="کد پستی ۱۰ رقمی">
+
+<label>آدرس کامل</label>
+<textarea id="address" placeholder="استان، شهر، خیابان، کوچه، پلاک و واحد"></textarea>
+
+<div class="amount">
+مبلغ قابل پرداخت:
+<span id="amount">۵۰۰٬۰۰۰ تومان</span>
+</div>
+
+<div class="bank">
+<strong>شماره کارت:</strong>
+<span class="card">5892-1017-5728-1197</span>
+
+<br>
+
+ابتدا مبلغ سفارش را به کارت بالا واریز کنید.
+
+<br>
+
+سپس روی دکمه زیر بزنید و
+<strong>شماره پیگیری پرداخت</strong>
+را در پیامک وارد کنید.
+</div>
+
+<button type="button" id="orderButton">
+ثبت سفارش و دریافت رسید پیامکی
+</button>
+
+<div class="success" id="successBox">
+
+<strong>✅ سفارش آماده شد.</strong>
+
+<div id="orderInfo"></div>
+
+<p>
+برای ارسال سفارش، روی دکمه زیر بزنید.
+</p>
+
+<a id="smsLink" class="sms-button" href="#">
+📩 ارسال رسید پیامکی
+</a>
+
+</div>
+
+</div>
+</div>
+
+<footer>
+© تمامی حقوق برای مهرداد نصیریان محفوظ است.
+</footer>
+
 <script>
 
-const prices = {
-  "سایبان عشق": 500000,
-  "اخلاق نیکو": 500000,
-  "کتاب سوم": 500000,
-  "کتاب چهارم": 500000,
-  "مجموعه چهار کتاب": 1800000
+var prices = {
+"سایبان عشق":500000,
+"اخلاق نیکو":500000,
+"کتاب سوم":500000,
+"کتاب چهارم":500000,
+"مجموعه چهار کتاب":1800000
 };
 
 function formatPrice(number){
-  return number.toLocaleString('fa-IR') + " تومان";
+return number.toLocaleString("fa-IR")+" تومان";
 }
 
 function updateAmount(){
 
-  const book = document.getElementById("bookSelect").value;
-  const price = prices[book];
+var book=document.getElementById("bookSelect").value;
 
-  document.getElementById("amount").innerText =
-    formatPrice(price);
+document.getElementById("amount").textContent=
+formatPrice(prices[book]);
+
 }
 
-function sendOrder(){
+document.getElementById("bookSelect").addEventListener(
+"change",
+updateAmount
+);
 
-  const book =
-    document.getElementById("bookSelect").value;
+document.getElementById("orderButton").addEventListener(
+"click",
+function(){
 
-  const firstName =
-    document.getElementById("firstName").value.trim();
+var book=document.getElementById("bookSelect").value;
+var firstName=document.getElementById("firstName").value.trim();
+var lastName=document.getElementById("lastName").value.trim();
+var phone=document.getElementById("phone").value.trim();
+var postal=document.getElementById("postalCode").value.trim();
+var address=document.getElementById("address").value.trim();
 
-  const lastName =
-    document.getElementById("lastName").value.trim();
-
-  const phone =
-    document.getElementById("phone").value.trim();
-
-  const postal =
-    document.getElementById("postalCode").value.trim();
-
-  const address =
-    document.getElementById("address").value.trim();
-
-  /* بررسی اطلاعات */
-
-  if(firstName === ""){
-    alert("لطفاً نام خود را وارد کنید.");
-    document.getElementById("firstName").focus();
-    return;
-  }
-
-  if(lastName === ""){
-    alert("لطفاً نام خانوادگی خود را وارد کنید.");
-    document.getElementById("lastName").focus();
-    return;
-  }
-
-  if(phone === ""){
-    alert("لطفاً شماره موبایل را وارد کنید.");
-    document.getElementById("phone").focus();
-    return;
-  }
-
-  if(postal === ""){
-    alert("لطفاً کد پستی را وارد کنید.");
-    document.getElementById("postalCode").focus();
-    return;
-  }
-
-  if(address === ""){
-    alert("لطفاً آدرس کامل را وارد کنید.");
-    document.getElementById("address").focus();
-    return;
-  }
-
-  const price = prices[book];
-
-  const orderNumber =
-    "ORD-" + Date.now().toString().slice(-8);
-
-  const fullName =
-    firstName + " " + lastName;
-
-  /* نمایش اطلاعات سفارش */
-
-  document.getElementById("orderInfo").innerHTML =
-    "<br><strong>شماره سفارش:</strong> " + orderNumber +
-    "<br><strong>کتاب:</strong> " + book +
-    "<br><strong>مبلغ:</strong> " + formatPrice(price) +
-    "<br><strong>نام:</strong> " + firstName +
-    "<br><strong>نام خانوادگی:</strong> " + lastName +
-    "<br><strong>موبایل:</strong> " + phone +
-    "<br><strong>کد پستی:</strong> " + postal +
-    "<br><strong>آدرس:</strong> " + address;
-
-  /*
-    متن پیامک
-  */
-
-  const message =
-    "سلام، رسید سفارش کتاب\n\n" +
-    "شماره سفارش: " + orderNumber + "\n" +
-    "کتاب: " + book + "\n" +
-    "مبلغ: " + formatPrice(price) + "\n" +
-    "نام: " + firstName + "\n" +
-    "نام خانوادگی: " + lastName + "\n" +
-    "موبایل: " + phone + "\n" +
-    "کد پستی: " + postal + "\n" +
-    "آدرس: " + address + "\n\n" +
-    "شماره پیگیری / کد رسید پرداخت: ";
-
-  /*
-    شماره فروشنده
-  */
-
-  const sellerPhone = "09915164280";
-
-  /*
-    ساخت لینک پیامک
-  */
-
-  const smsUrl =
-    "sms:" +
-    sellerPhone +
-    "?body=" +
-    encodeURIComponent(message);
-
-  const smsLink =
-    document.getElementById("smsLink");
-
-  smsLink.href = smsUrl;
-
-  /*
-    نمایش قسمت موفقیت
-  */
-
-  document.getElementById("successBox").style.display =
-    "block";
-
-  /*
-    رفتن به قسمت رسید
-  */
-
-  document.getElementById("successBox")
-    .scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
+if(firstName===""){
+alert("لطفاً نام را وارد کنید.");
+return;
 }
 
+if(lastName===""){
+alert("لطفاً نام خانوادگی را وارد کنید.");
+return;
+}
 
-/*
-  دکمه ارسال پیامک
-*/
+if(phone===""){
+alert("لطفاً شماره موبایل را وارد کنید.");
+return;
+}
 
-document.addEventListener("DOMContentLoaded", function(){
+if(postal===""){
+alert("لطفاً کد پستی را وارد کنید.");
+return;
+}
 
-  const smsButton =
-    document.getElementById("smsLink");
+if(address===""){
+alert("لطفاً آدرس کامل را وارد کنید.");
+return;
+}
 
-  if(smsButton){
+var price=prices[book];
 
-    smsButton.addEventListener("click", function(event){
+var orderNumber=
+"ORD-"+Date.now().toString().slice(-8);
 
-      /*
-        اگر لینک پیامک ساخته نشده باشد
-      */
+var message=
+"رسید سفارش کتاب\n"+
+"شماره سفارش: "+orderNumber+"\n"+
+"کتاب: "+book+"\n"+
+"مبلغ: "+formatPrice(price)+"\n"+
+"نام: "+firstName+"\n"+
+"نام خانوادگی: "+lastName+"\n"+
+"موبایل: "+phone+"\n"+
+"کد پستی: "+postal+"\n"+
+"آدرس: "+address+
+"\n\nشماره پیگیری پرداخت: ";
 
-      if(!this.href || !this.href.startsWith("sms:")){
+document.getElementById("orderInfo").innerHTML=
+"<br><strong>شماره سفارش:</strong> "+orderNumber+
+"<br><strong>کتاب:</strong> "+book+
+"<br><strong>مبلغ:</strong> "+formatPrice(price)+
+"<br><strong>نام:</strong> "+firstName+
+"<br><strong>نام خانوادگی:</strong> "+lastName;
 
-        event.preventDefault();
+var smsNumber="09915164280";
 
-        alert("ابتدا اطلاعات سفارش را ثبت کنید.");
+var smsHref=
+"sms:"+smsNumber+"?body="+
+encodeURIComponent(message);
 
-        return;
-      }
+document.getElementById("smsLink").setAttribute(
+"href",
+smsHref
+);
 
-    });
+document.getElementById("successBox").style.display="block";
 
-  }
-
+document.getElementById("successBox").scrollIntoView({
+behavior:"smooth"
 });
 
+}
+);
 
 updateAmount();
 
 </script>
+
+</body>
+</html>
