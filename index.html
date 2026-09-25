@@ -194,14 +194,14 @@ color:#777
 </div>
 
 <div class="book">
-<h2>📙 کتاب سوم</h2>
-<p>برای رشد فردی و بهتر زندگی کردن</p>
+<h2>📙 بندِ دل</h2>
+<p>تربیت، همراهی و شکوفایی کودک</p>
 <div class="price">۵۰۰٬۰۰۰ تومان</div>
 </div>
 
 <div class="book">
-<h2>📕 کتاب چهارم</h2>
-<p>موضوعات کاربردی برای زندگی و خانواده</p>
+<h2>📕 پل به قلب نوجوان</h2>
+<p>شناخت، احترام، اعتماد و نوجوان موفق</p>
 <div class="price">۵۰۰٬۰۰۰ تومان</div>
 </div>
 
@@ -252,12 +252,12 @@ value="table">
 اخلاق نیکو - ۵۰۰٬۰۰۰ تومان
 </option>
 
-<option value="کتاب سوم">
-کتاب سوم - ۵۰۰٬۰۰۰ تومان
+<option value="بندِ دل">
+بندِ دل - ۵۰۰٬۰۰۰ تومان
 </option>
 
-<option value="کتاب چهارم">
-کتاب چهارم - ۵۰۰٬۰۰۰ تومان
+<option value="پل به قلب نوجوان">
+پل به قلب نوجوان - ۵۰۰٬۰۰۰ تومان
 </option>
 
 <option value="مجموعه چهار کتاب">
@@ -311,8 +311,13 @@ required
 ></textarea>
 
 <div class="amount">
+
 مبلغ قابل پرداخت:
-<span id="amount">۵۰۰٬۰۰۰ تومان</span>
+
+<span id="amount">
+۵۰۰٬۰۰۰ تومان
+</span>
+
 </div>
 
 <input
@@ -354,6 +359,7 @@ required
 <div class="info">
 
 ⚠️ بعد از پرداخت، شماره پیگیری را دقیق وارد کنید.
+
 سفارش پس از بررسی پرداخت توسط فروشنده تأیید می‌شود.
 
 </div>
@@ -375,15 +381,23 @@ required
 <script>
 
 var prices={
+
 "سایبان عشق":500000,
+
 "اخلاق نیکو":500000,
-"کتاب سوم":500000,
-"کتاب چهارم":500000,
+
+"بندِ دل":500000,
+
+"پل به قلب نوجوان":500000,
+
 "مجموعه چهار کتاب":1800000
+
 };
 
 var select=document.getElementById("bookSelect");
+
 var amount=document.getElementById("amount");
+
 var amountInput=document.getElementById("amountInput");
 
 select.addEventListener("change",function(){
