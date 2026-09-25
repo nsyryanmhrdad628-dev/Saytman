@@ -269,18 +269,40 @@ footer{
       <span id="amount">۵۰۰٬۰۰۰ تومان</span>
     </div>
 
-    <
-      </p><div class="bank">
-  <strong>شماره کارت:</strong>
-  <strong dir="ltr" style="direction:ltr; unicode-bidi:embed;">
-    5892-1017-5728-1197
-  </strong>
-  <br>
-  ابتدا مبلغ سفارش را به کارت بالا واریز کنید.
-  <br>
-  سپس روی دکمه «ارسال رسید پیامکی» بزنید و
-  <strong>شماره پیگیری پرداخت</strong> را در پیامک وارد کنید.
-</div>
+    <div class="bank">
+      <strong>شماره کارت:</strong>
+      <strong dir="ltr" style="direction:ltr; unicode-bidi:embed;">
+        5892-1017-5728-1197
+      </strong>
+      <br>
+      ابتدا مبلغ سفارش را به کارت بالا واریز کنید.
+      <br>
+      سپس روی دکمه «ثبت سفارش و دریافت رسید پیامکی» بزنید و
+      <strong>شماره پیگیری پرداخت</strong> را در پیامک وارد کنید.
+    </div>
+
+    <button onclick="sendOrder()">
+      ثبت سفارش و دریافت رسید پیامکی
+    </button>
+
+    <div class="success" id="successBox">
+
+      <strong>✅ اطلاعات سفارش آماده شد.</strong>
+
+      <div id="orderInfo"></div>
+
+      <p>
+        حالا روی دکمه زیر بزنید تا پیامک سفارش برای فروشنده باز شود.
+        شماره پیگیری پرداخت را نیز داخل پیامک وارد کنید.
+      </p>
+
+      <a id="smsLink" class="sms-button">
+        📩 ارسال رسید پیامکی
+      </a>
+
+      <p>
+        پس از بررسی پرداخت، سفارش شما تأیید نهایی می‌شود.
+      </p>
 
     </div>
 
@@ -291,7 +313,6 @@ footer{
 <footer>
   © تمامی حقوق برای مهرداد نصیریان محفوظ است.
 </footer>
-
 
 <script>
 
